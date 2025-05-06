@@ -136,7 +136,7 @@ export default function App() {
 
 	type Mode = 'none' | 'graph' | 'table' | 'demo';
 	const [mode, setMode]				 = useState<Mode>('none');
-	const [connected, setConnected] = useState(false);
+	//const [connected, setConnected] = useState(false);
 
 	return (
 		<div className={`gradient-bg ${mode}`}>
@@ -149,14 +149,14 @@ export default function App() {
 					usbConnector={microbitConnectorUSB}
 					bluetoothConnector={microbitConnectorBluetooth}
 					onConnect={() => {
-						setConnected(true);
+						//setConnected(true);
                         if (mode == "none"){
                             setMode("graph")
                         }
 					}}
 					onDisconnect={() => {
 						disconnectMicrobit();
-						setConnected(false);
+						//setConnected(false);
                         setMode("none");
 					}}
 				/>
