@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('../assets/fonts/GT-Walsheim-TRIAL/GT-Walsheim-Bold-Trial.otf') format('opentype');
+}
+
+body{
+  margin:0;
+  font-family: "GT Walsheim Bold";
+}
+h1{
+  font-family: "GT Walsheim Bold";
+}
+.infoText{
+  margin-top: 0px;
+  margin-left:1rem;
+  font-size:1.2rem;
+  opacity: 0.8;
+
+}
+.flashInfo{
+  margin-left:2rem;
+  font-size: 1rem;
+  opacity: 0.8;
+  display: flex;
+  gap:1rem;
+}
+
+.opening-container{
+  display:flex;
+  padding: 10px 20px 10px 20px;
+  align-items:center;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  gap:.5rem;
+
+
+  color:#fff;
+  text-shadow: 2px 2px 20px #222;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: saturate(100%) blur(100px);
+  
+}
+.opening-container h1{
+  order: 1;
+  opacity:1; 
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left:0.25rem;
+  margin-right:0.25rem;
+  user-select: none;
+}
+.demos{
+  display: flex;
+  gap: 1rem;
+}
+
+.gradient-bg{
+  position:relative;
+  height: 100vh;
+  transition: background 0.5s ease;
+
+}
+
+
+.bg-graph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Using micro:bit colour scheme for gradient backgrounds  */
+  background: linear-gradient(145deg, #586AD7 10%, #2E3871 100%);
+  z-index: -1;
+}
+
+.bg-table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(144deg,rgba(0, 184, 0, 1) 10%, rgba(0, 117, 57, 1) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.bg-none {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(144deg,rgba(0, 0, 0, 1) 10%, rgba(0, 117, 57, 1) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.gradient-bg.graph .bg-graph {
+  opacity: 1;
+}
+.gradient-bg.graph .bg-table {
+  opacity: 1;
+}
+.gradient-bg.graph .bg-none {
+  opacity: 1;
+}

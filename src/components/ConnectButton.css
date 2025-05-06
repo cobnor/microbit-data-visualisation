@@ -1,0 +1,107 @@
+@font-face {
+	font-family: 'GT Walsheim Bold';
+	src: url('../assets/fonts/GT-Walsheim-TRIAL/GT-Walsheim-Bold-Trial.otf') format('opentype');
+}
+
+.connectBtn {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 3px 23px;
+	gap: 10px;
+	width: 8.438rem;
+	height: 3rem;
+	background: #3B3B3B;
+	color: #fff;
+	font-family: 'GT Walsheim Bold';
+	font-size: 18pt;
+	border: none;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(9.75px);
+	border-radius: 8px;
+	transition: background 0.2s, transform 0.1s;
+}
+
+
+.connectBtn:hover {
+	transform: scale(0.98);
+}
+
+.connectBtn.connected {
+	background: #468548;
+}
+
+.connect-dialog-overlay {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100vw; height: 100vh;
+	background: rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+
+	opacity: 0;
+	animation: overlayFadeIn 0.3s forwards;
+}
+
+@keyframes overlayFadeIn {
+	from { opacity: 0; }
+	to	 { opacity: 1; }
+}
+
+.connect-dialog {
+	background: #fff;
+	color: #000;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	animation: dialogFadeIn 0.2s ease-out forwards;
+}
+
+@keyframes dialogFadeIn {
+from {
+	opacity: 0;
+	transform: scale(0.9);
+}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.connect-dialog p {
+	margin: 0 0 1rem;
+	font-family: 'GT Walsheim Bold';
+	font-size: 14pt;
+}
+
+.connect-dialog .dialog-buttons {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.connect-dialog button {
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	background: #3B3B3B;
+	color: #fff;
+	font-family: 'GT Walsheim Bold';
+	font-size: 14pt;
+  transition: transform 0.1s;
+}
+
+.connect-dialog button:hover {
+	transform: scale(0.98);
+}

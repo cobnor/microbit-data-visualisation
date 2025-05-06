@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'GT Walsheim Bold';
+	src: url('..\assets\fonts\GT-Walsheim-TRIAL\GT-Walsheim-Bold-Trial.otf') format('opentype');
+}
+.graphOptionBtn{
+	cursor:pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+
+
+	background: #262626;
+	color:#fff;
+	font-family: 'GT Walsheim Bold';
+	font-size: 12pt;
+
+	border: none;
+	border-radius: 24px;
+
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	z-index: 1;
+
+	transition: all .1s;
+}
+.graphOptionBtn:hover{
+	scale:99%;
+	box-shadow: none;
+}
+
+

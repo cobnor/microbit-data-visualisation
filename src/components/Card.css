@@ -1,0 +1,16 @@
+.card{
+    background-color: #fff;
+    color:000;
+    margin-top:1em;
+    margin-left:10.2em;
+    padding: 0.25rem 1rem 1rem 1rem;
+    width:calc(100vw - 13.75rem);
+    height:calc(100vh - 8.25rem);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+.card-transparent{
+    background-color: transparent;
+    box-shadow: none;
+}
