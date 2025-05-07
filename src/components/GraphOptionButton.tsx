@@ -1,7 +1,6 @@
 import React from 'react';
-import './GraphOptionButton.css';  // Import the CSS file
+import './GraphOptionButton.css';
 
-// Define the type for props
 interface GraphOptionButtonProps {
   text: string;
   onClick: () => void;
