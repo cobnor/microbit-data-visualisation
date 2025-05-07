@@ -1,5 +1,3 @@
-// src/components/ConnectButton.tsx
-
 import React, { useState } from 'react';
 import './ConnectButton.css';
 
@@ -8,14 +6,11 @@ import { MicrobitConnectorBluetooth } from '../bluetooth/connection';
 
 
 export interface ConnectButtonProps {
-  /** The two connector instances created in App.tsx */
   usbConnector: MicrobitConnectorUSB;
   bluetoothConnector: MicrobitConnectorBluetooth;
 
-  /** Called once we’ve successfully connected (USB or bluetooth) */
   onConnect: () => void;
 
-  /** Called when user disconnects */
   onDisconnect: () => void;
 }
 
@@ -31,7 +26,7 @@ const ConnectButton: React.FC<ConnectButtonProps> = ({
 
   const isConnected = Boolean(connector);
 
-  /** Main button click: open dialog or disconnect */
+  // Main button click: open dialog or disconnect
   const handleMainClick = () => {
     if (isConnected) {
       usbConnector.disconnect();
@@ -43,7 +38,7 @@ const ConnectButton: React.FC<ConnectButtonProps> = ({
     }
   };
 
-  /** User selects USB vs. Bluetooth */
+  // USB or bluetooth
   const choose = async (type: 'USB' | 'Bluetooth') => {
     setShowDialog(false);
     setConnecting(true);
