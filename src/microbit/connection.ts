@@ -1,7 +1,6 @@
 import { createWebUSBConnection, MicrobitWebUSBConnection } from "@microbit/microbit-connection";
 import { ConnectionStatus } from "@microbit/microbit-connection";
 import { SerialDataEvent } from "@microbit/microbit-connection";
-//import Plotly from "plotly.js-dist";
 import { handleConfig, handleData, GraphConfig, PlotData } from "../utils/messageHandler";
 
 export class MicrobitConnectorUSB {
