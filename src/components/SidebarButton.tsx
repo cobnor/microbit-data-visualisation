@@ -1,7 +1,6 @@
 import React from 'react';
-import './SidebarButton.css';  // Import the CSS file
+import './SidebarButton.css';
 
-// Define the type for props
 interface SidebarButtonProps {
   text: string;
   onClick: () => void;
