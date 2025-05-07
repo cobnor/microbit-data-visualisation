@@ -19,8 +19,8 @@ header{
 
 }
 header .title {
-    flex: 1 1 auto; /* This takes up the remaining space */
-    text-align: right; /* Aligns the title text to the right */
+    flex: 1 1 auto;
+    text-align: right;
     font-size: 24pt;
     font-family: 'GT Walsheim Bold';
     user-select: none;
