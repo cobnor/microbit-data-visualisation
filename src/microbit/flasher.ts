@@ -6,8 +6,6 @@ import { createUniversalHexFlashDataSource, MicrobitWebUSBConnection} from "@mic
  */
 async function loadHexFileAccelerometer(): Promise<string> {
     const response = await fetch("microbit-accelerometer2.hex");
-    //const response = await fetch("buttons).hex");
-    //const response = await fetch("BLE_All_Services_CODAL_0-2-40-ABDLIMTU-P.hex");
     if (!response.ok) {
         throw new Error(`Failed to load HEX file: ${response.statusText}`);
     }
@@ -15,9 +13,7 @@ async function loadHexFileAccelerometer(): Promise<string> {
 }
 
 async function loadHexFileScatter(): Promise<string> {
-    //const response = await fetch("accelerometer.hex");
     const response = await fetch("microbit-accel_scatter.hex");
-    //const response = await fetch("BLE_All_Services_CODAL_0-2-40-ABDLIMTU-P.hex");
     if (!response.ok) {
         throw new Error(`Failed to load HEX file: ${response.statusText}`);
     }
@@ -25,9 +21,7 @@ async function loadHexFileScatter(): Promise<string> {
 }
 
 async function loadHexFilePie(): Promise<string> {
-    //const response = await fetch("accelerometer.hex");
     const response = await fetch("microbit-buttons_pie.hex");
-    //const response = await fetch("BLE_All_Services_CODAL_0-2-40-ABDLIMTU-P.hex");
     if (!response.ok) {
         throw new Error(`Failed to load HEX file: ${response.statusText}`);
     }
@@ -35,9 +29,7 @@ async function loadHexFilePie(): Promise<string> {
 }
 
 async function loadHexFileButtons(): Promise<string> {
-    //const response = await fetch("accelerometer.hex");
     const response = await fetch("microbit-buttons2.hex");
-    //const response = await fetch("BLE_All_Services_CODAL_0-2-40-ABDLIMTU-P.hex");
     if (!response.ok) {
         throw new Error(`Failed to load HEX file: ${response.statusText}`);
     }
